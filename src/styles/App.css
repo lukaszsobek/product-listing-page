@@ -1,0 +1,13 @@
+body {
+  --red: rgba(230, 57, 70, 1);
+  --white: rgba(241, 250, 238, 1);
+  --lblue: rgba(168, 218, 220, 1);
+  --mblue: rgba(69, 123, 157, 1);
+  --dblue: rgba(29, 53, 87, 1);
+
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-color: var(--white);
+}
+

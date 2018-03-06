@@ -1,0 +1,8 @@
+{
+  "short_name": "Product Listing Page",
+  "name": "Sample Product Listing Page",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
