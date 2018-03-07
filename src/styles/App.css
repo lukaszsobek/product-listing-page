@@ -1,9 +1,9 @@
 /* general */
 
+
 html {
   font-size: 6.25%;
 }
-
 
 body {
   --red: rgba(230, 57, 70, 1);
@@ -21,6 +21,40 @@ body {
 }
 
 
+/* header */
+
+
+header {
+  background: var(--mblue);
+  padding: 2rem;
+}
+
+
+.container {
+  max-width: 950px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+/* modals */
+
+
+.modal--category,
+.modal--color {
+  user-select: none;
+  cursor: pointer;
+}
+
+.modal--category__data,
+.modal--color__data {
+  position: absolute;
+  z-index: 999;
+  background: rgba(0,0,0,0.2);
+}
+
+
 /* product list */
 
 
@@ -28,6 +62,11 @@ body {
   display: flex;
   flex-wrap: wrap;
 }
+
+/* 
+product-list__item could have been nested so as 
+not to have to count the % explicitly
+*/
 
 .product-list__item {
   width: 27%;

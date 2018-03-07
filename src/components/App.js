@@ -9,13 +9,11 @@ import AppBody from "./AppBody";
 class App extends Component {
 
   render() {
-    const { productList } = this.props;
+    const { modalState,openModal, productList } = this.props;
     return (
       <div className="plp-app">
-        <AppHeader/>
-        <AppBody
-          productList={ productList }
-        />
+        <AppHeader />
+        <AppBody productList={ productList } />
       </div>
     );
   }
@@ -25,8 +23,4 @@ const mapStateToProps = state => ({
   productList: state.products
 });
 
-const mapDispatchToProps = dispatch => ({
-
-});
-
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default connect(mapStateToProps)(App);

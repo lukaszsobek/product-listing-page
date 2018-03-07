@@ -1,11 +1,14 @@
 import React from "react";
 
-const AppHeader = props => {
+import CategoryModal from "./CategoryModal.js";
+import ColorModal from "./ColorModal.js";
+
+const AppHeader = () => {
     return (
         <header>
-            <nav className="containter">
-                <div>Category</div>
-                <div>Color</div>
+            <nav className="container">
+                <CategoryModal />
+                <ColorModal />
             </nav>
         </header>
     )
