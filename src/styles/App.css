@@ -51,7 +51,10 @@ header {
 .modal--color__data {
   position: absolute;
   z-index: 999;
-  background: rgba(0,0,0,0.2);
+  background: var(--dblue);
+  color: var(--white);
+  padding: 20px;
+
 }
 
 
