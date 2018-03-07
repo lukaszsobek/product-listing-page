@@ -1,5 +1,7 @@
+const TOGGLE_FILTER = "TOGGLE_FILTER";
 const TOGGLE_MODAL = "TOGGLE_MODAL";
 
 export {
+    TOGGLE_FILTER,
     TOGGLE_MODAL
 }

@@ -1,4 +1,5 @@
 import {
+    TOGGLE_FILTER,
     TOGGLE_MODAL
 } from "../constants";
 
@@ -9,16 +10,20 @@ const initialState = {
         categoryModalVisible: false,
     },
     dropdownData: {
-        colors: [
-            "blue",
-            "green",
-            "black"
-        ],
         categories: [
             "circles",
             "squares",
             "triangles"
+        ],
+        colors: [
+            "blue",
+            "green",
+            "black"
         ]
+    },
+    activeFilters: {
+        categories: [],
+        colors: []
     },
     products: [{
         name: "Product one",
@@ -66,8 +71,29 @@ const initialState = {
 const rootReducer = (state = initialState, action) => {
 
     switch(action.type) {
-        case TOGGLE_MODAL:
+        case TOGGLE_FILTER:
+            const {filterType, filterValue} = action;
+            const filterValues = state.activeFilters[filterType];
 
+            const newfilterValues = filterValues.filter((item) => item !== filterValue);
+
+            if(newfilterValues.length === filterValues.length) {
+                newfilterValues.push(filterValue);
+            }
+
+            const activeFilters = {
+                ...state.activeFilter
+            }
+            activeFilters[filterType] = newfilterValues;
+
+            console.log(activeFilters)
+
+            return {
+                ...state,
+                activeFilters
+            }
+
+        case TOGGLE_MODAL:
             const {
                 colorModalVisible,
                 categoryModalVisible
