@@ -1,7 +1,15 @@
 import React from "react";
 
+import ProductList from "./ProductList";
+
 const AppBody = props => {
-    return <p>AppBody</p>
+    const { productList } = props;
+    
+    return (
+        <main>
+            <ProductList productList={productList}/>
+        </main>
+    );
 }
 
 export default AppBody;

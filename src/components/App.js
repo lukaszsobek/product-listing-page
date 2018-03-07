@@ -9,16 +9,20 @@ import AppBody from "./AppBody";
 class App extends Component {
 
   render() {
+    const { productList } = this.props;
     return (
       <div className="plp-app">
         <AppHeader/>
-        <AppBody/>
+        <AppBody
+          productList={ productList }
+        />
       </div>
     );
   }
 }
 
 const mapStateToProps = state => ({
+  productList: state.products
 });
 
 const mapDispatchToProps = dispatch => ({

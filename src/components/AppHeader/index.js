@@ -1,7 +1,14 @@
 import React from "react";
 
 const AppHeader = props => {
-    return <p>Header</p>
+    return (
+        <header>
+            <nav className="containter">
+                <div>Category</div>
+                <div>Color</div>
+            </nav>
+        </header>
+    )
 };
 
 export default AppHeader;
