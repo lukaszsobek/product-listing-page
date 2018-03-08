@@ -29,7 +29,11 @@ class CategoryModal extends Component {
     render() {
         const { data, isOpen, updatePage, toggleModal } = this.props;
         return (
-            <div className="modal--category">
+            <div className={
+                    isOpen 
+                    ? "modal--category modal--category--open"
+                    : "modal--category"
+                }>
                 <div
                     className="modal--category__title"
                     onClick={toggleModal}

@@ -11,6 +11,7 @@ body {
   --lblue: rgba(168, 218, 220, 1);
   --mblue: rgba(69, 123, 157, 1);
   --dblue: rgba(29, 53, 87, 1);
+  --shade: rgba(0,0,0,0.1);
 
   box-sizing: border-box;
   margin: 0;
@@ -27,6 +28,7 @@ body {
 header {
   background: var(--mblue);
   padding: 2rem;
+  box-shadow: 0 0 3px var(--shade);
 }
 
 
@@ -45,17 +47,34 @@ header {
 .modal--color {
   user-select: none;
   cursor: pointer;
+  position: relative;
+}
+
+.modal--category--open,
+.modal--color--open {
+  background: var(--dblue); 
+}
+
+.modal--category__title,
+.modal--color__title {
+  padding: 20px;
+  color: var(--white);
 }
 
 .modal--category__data,
 .modal--color__data {
-  margin-left: -20px;
+  width: 100%;
   position: absolute;
   z-index: 999;
   background: var(--dblue);
   color: var(--white);
-  padding: 20px;
+}
 
+.modal--category__data div,
+.modal--color__data div {
+  border-bottom: 1px solid var(--shade);
+  padding: 10px;
+  text-align: center;
 }
 
 
@@ -79,6 +98,7 @@ not to have to count the % explicitly
   border-radius: 10px;
   background-color: var(--white);
   overflow: hidden;
+  box-shadow: 1px 1px 1px var(--shade);
 }
 
 @media (max-width: 900px) {
@@ -97,17 +117,10 @@ not to have to count the % explicitly
 .product-list__item__category {
   font-style: italic;
 }
-.product-list__item__colors {
-
-}
 
 .product-list__item__colors__name {
   margin: 0 5px;
   padding: 1px 3px;
   border-radius: 5px;
-  background: rgba(0,0,0,0.1);
-}
-
-.product-list__item__price {
-
+  background: var(--shade);
 }

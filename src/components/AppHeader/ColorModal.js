@@ -29,7 +29,11 @@ class ColorModal extends Component {
     render() {
         const { data, isOpen, updatePage, toggleModal } = this.props;
         return (
-            <div className="modal--color">
+            <div className={
+                isOpen 
+                ? "modal--color modal--color--open"
+                : "modal--color"
+            }>
                 <div
                     className="modal--color__title"
                     onClick={toggleModal}
