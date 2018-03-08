@@ -21,7 +21,6 @@ const DropDown = props => {
     return(
         <div className="modal--category__data">
             { categoryList }
-            <div>..clear</div>
         </div>
     );
 }
