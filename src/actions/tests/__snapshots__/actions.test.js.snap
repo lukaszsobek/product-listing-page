@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Correclty creates action for filterProducts 1`] = `
+Object {
+  "type": "FILTER_PRODUCTS",
+}
+`;
+
+exports[`Correclty creates action for toggleFilter 1`] = `
+Object {
+  "filterType": 1,
+  "filterValue": 2,
+  "type": "TOGGLE_FILTER",
+}
+`;
+
+exports[`Correclty creates action for toggleModal 1`] = `
+Object {
+  "modal": "sample",
+  "type": "TOGGLE_MODAL",
+}
+`;
+
+exports[`Correclty creates action for updatePage 1`] = `
+"dispatch => {
+        dispatch((0, _.toggleFilter)(filterType, filterValue));
+        dispatch((0, _.filterProducts)());
+    }"
+`;

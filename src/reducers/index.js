@@ -71,7 +71,10 @@ const initialState = {
 };
 
 const rootReducer = (state = initialState, action) => {
-    console.log(state);
+    console.log(
+        state.activeFilters.categories,
+        state.activeFilters.colors
+    );
 
     switch(action.type) {
         case TOGGLE_FILTER:
@@ -138,23 +141,18 @@ const rootReducer = (state = initialState, action) => {
                 // if there are color filters
                 if(colors.length) {
                     const colorString = product.colors.join(",,");
-                    hasColor = colors.some(color => {
-                        if(colorString.indexOf(color) > -1) {
-                            return true;
-                        };
-                        return false;
-                    });
+                    hasColor = colors.some(
+                        color => colorString.indexOf(color) > -1
+                    );
                 } else {
                     hasColor = true;
                 }
 
                 // if there are category filters
                 if(categories.length) {
-                    hasCategory = categories.some(category => {
-                        if(product.category === category) {
-                            return true;
-                        };
-                    });                   
+                    hasCategory = categories.some(
+                        category => product.category === category
+                    );                   
                 } else {
                     hasCategory = true;
                 }
