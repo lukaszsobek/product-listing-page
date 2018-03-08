@@ -55,4 +55,5 @@ const mapDispatchToProps = dispatch => ({
     updatePage: (value) => dispatch(updatePage("categories",value))
 });
 
+export { CategoryModal, DropDown };
 export default connect(mapStateToProps, mapDispatchToProps)(CategoryModal);

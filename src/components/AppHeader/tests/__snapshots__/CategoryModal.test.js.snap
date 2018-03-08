@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CategoryModal renders CategoryModal 1`] = `
+<div
+  className="modal--category"
+>
+  <div
+    className="modal--category__title"
+    onClick={[Function]}
+  >
+    Category
+  </div>
+  <DropDown
+    data={
+      Array [
+        1,
+        2,
+      ]
+    }
+    isOpen={false}
+    updatePage={[Function]}
+  />
+</div>
+`;
+
+exports[`CategoryModal renders DropDown 1`] = `
+<div
+  className="modal--category__data"
+>
+  <div
+    onClick={[Function]}
+  >
+    1
+  </div>
+  <div
+    onClick={[Function]}
+  >
+    2
+  </div>
+  <div>
+    ..clear
+  </div>
+</div>
+`;

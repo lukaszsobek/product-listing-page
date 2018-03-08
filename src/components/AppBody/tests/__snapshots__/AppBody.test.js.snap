@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AppBody renders with props 1`] = `
+<main>
+  <ProductList
+    productList={
+      Array [
+        1,
+        2,
+      ]
+    }
+  />
+</main>
+`;

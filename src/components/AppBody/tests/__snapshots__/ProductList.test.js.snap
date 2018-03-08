@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProductList renders ColorList 1`] = `
+Array [
+  <span
+    className="product-list__item__colors__name"
+>
+    1
+</span>,
+  <span
+    className="product-list__item__colors__name"
+>
+    2
+</span>,
+]
+`;
+
+exports[`ProductList renders ProductList 1`] = `
+<section
+  className="product-list"
+>
+  <ProductListItem
+    data={1}
+  />
+  <ProductListItem
+    data={2}
+  />
+</section>
+`;
+
+exports[`ProductList renders ProductListItem 1`] = `
+<div
+  className="product-list__item"
+>
+  <div
+    className="product-list__item__name"
+  >
+    name
+  </div>
+  <div
+    className="product-list__item__category"
+  >
+    Category: 
+    category
+  </div>
+  <div
+    className="product-list__item__colors"
+  >
+    Colors: 
+    <ColorList
+      data="colors"
+    />
+  </div>
+  <div
+    className="product-list__item__price"
+  >
+    Price: € 
+    price
+  </div>
+</div>
+`;

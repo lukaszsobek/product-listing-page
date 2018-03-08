@@ -55,4 +55,5 @@ const mapDispatchToProps = dispatch => ({
     updatePage: (value) => dispatch(updatePage("colors",value))
 });
 
+export { DropDown, ColorModal };
 export default connect(mapStateToProps, mapDispatchToProps)(ColorModal);

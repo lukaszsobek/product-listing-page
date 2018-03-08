@@ -39,4 +39,5 @@ const ColorList = props => {
     });
 };
 
+export { ColorList, ProductListItem, ProductList };
 export default ProductList;
