@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 
-import { toggleFilter, toggleModal } from "../../actions";
+import { updatePage, toggleModal } from "../../actions";
 
 const DropDown = props => {
-    const { data, isOpen, toggleFilter } = props;
+    const { data, isOpen, updatePage } = props;
     if(!isOpen) {
         return null;
     }
@@ -13,7 +13,7 @@ const DropDown = props => {
         return (
             <div
                 key={key}
-                onClick={() => toggleFilter(category)}
+                onClick={() => updatePage(category)}
                 >{ category }</div>
         );
     });
@@ -28,7 +28,7 @@ const DropDown = props => {
 
 class CategoryModal extends Component {
     render() {
-        const { data, isOpen, toggleFilter, toggleModal } = this.props;
+        const { data, isOpen, updatePage, toggleModal } = this.props;
         return (
             <div className="modal--category">
                 <div
@@ -38,7 +38,7 @@ class CategoryModal extends Component {
                 <DropDown
                     isOpen={isOpen}
                     data={data}
-                    toggleFilter={toggleFilter}
+                    updatePage={updatePage}
                     />
             </div>
         );
@@ -52,7 +52,7 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
     toggleModal: () => dispatch(toggleModal("CategoryModal")),
-    toggleFilter: (value) => dispatch(toggleFilter("categories",value))
+    updatePage: (value) => dispatch(updatePage("categories",value))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(CategoryModal);

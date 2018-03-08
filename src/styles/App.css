@@ -49,6 +49,7 @@ header {
 
 .modal--category__data,
 .modal--color__data {
+  margin-left: -20px;
   position: absolute;
   z-index: 999;
   background: var(--dblue);

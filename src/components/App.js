@@ -9,7 +9,7 @@ import AppBody from "./AppBody";
 class App extends Component {
 
   render() {
-    const { modalState,openModal, productList } = this.props;
+    const { productList } = this.props;
     return (
       <div className="plp-app">
         <AppHeader />
@@ -20,7 +20,7 @@ class App extends Component {
 }
 
 const mapStateToProps = state => ({
-  productList: state.products
+  productList: state.filteredProducts
 });
 
 export default connect(mapStateToProps)(App);
