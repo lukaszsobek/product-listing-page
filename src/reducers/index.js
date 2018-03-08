@@ -71,11 +71,6 @@ const initialState = {
 };
 
 const rootReducer = (state = initialState, action) => {
-    console.log(
-        state.activeFilters.categories,
-        state.activeFilters.colors
-    );
-
     switch(action.type) {
         case TOGGLE_FILTER:
             const {filterType, filterValue} = action;
