@@ -28,7 +28,6 @@ JavaScript, ES6, React, JSX, Redux, Jest, RWD
 - Add missing reducer tests
 - Add clear filter option to remove filters
 - Refactor dropdowns to independent component
-- Extract reducers into separate files
 - Fetching Products from an external api
 - Add showing active filters
 
