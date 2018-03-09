@@ -2,28 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 
 import { updatePage, toggleModal } from "../../actions";
-
-const DropDown = props => {
-    const { data, isOpen, updatePage } = props;
-    if(!isOpen) {
-        return null;
-    }
-
-    const categoryList = data.map((category,key) => {
-        return (
-            <div
-                key={key}
-                onClick={() => updatePage(category)}
-                >{ category }</div>
-        );
-    });
-
-    return(
-        <div className="modal--category__data">
-            { categoryList }
-        </div>
-    );
-}
+import Dropdown from "./Dropdown";
 
 class CategoryModal extends Component {
     render() {
@@ -38,10 +17,11 @@ class CategoryModal extends Component {
                     className="modal--category__title"
                     onClick={toggleModal}
                     >Category</div>
-                <DropDown
+                <Dropdown
                     isOpen={isOpen}
                     data={data}
                     updatePage={updatePage}
+                    dropdownClass="modal--category__data"
                     />
             </div>
         );
@@ -58,5 +38,5 @@ const mapDispatchToProps = dispatch => ({
     updatePage: (value) => dispatch(updatePage("categories",value))
 });
 
-export { CategoryModal, DropDown };
+export { CategoryModal };
 export default connect(mapStateToProps, mapDispatchToProps)(CategoryModal);

@@ -1,4 +1,4 @@
-import { CategoryModal, DropDown } from "../CategoryModal";
+import { CategoryModal } from "../CategoryModal";
 
 describe("CategoryModal", () => {
 
@@ -10,18 +10,5 @@ describe("CategoryModal", () => {
             toggleModal: () => null
         }
         expect(new CategoryModal(props).render()).toMatchSnapshot();
-    });
-
-    it("returns null if no DropDown",() => {
-        const props = {}
-        expect(DropDown(props)).toBe(null);
-    });
-
-    it("renders DropDown",() => {
-        const props = {
-            isOpen: true,
-            data: [1,2]
-        }
-        expect(DropDown(props)).toMatchSnapshot();
     });
 });

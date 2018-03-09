@@ -10,35 +10,16 @@ exports[`ColorModal renders ColorModal 1`] = `
   >
     Colors
   </div>
-  <DropDown
+  <Dropdown
     data={
       Array [
         1,
         2,
       ]
     }
+    dropdownClass="modal--color__data"
     isOpen={false}
     updatePage={[Function]}
   />
-</div>
-`;
-
-exports[`ColorModal renders DropDown 1`] = `
-<div
-  className="modal--color__data"
->
-  <div
-    onClick={[Function]}
-  >
-    1
-  </div>
-  <div
-    onClick={[Function]}
-  >
-    2
-  </div>
-  <div>
-    ..clear
-  </div>
 </div>
 `;

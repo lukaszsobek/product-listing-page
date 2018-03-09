@@ -26,7 +26,6 @@ JavaScript, ES6, React, JSX, Redux, Redux thunk, Jest, RWD
 
 ## To Do:
 - Add clear filter option to remove filters
-- Refactor dropdowns to independent component
 - Fetching Products from an external api
 - Add showing active filters
 

@@ -2,28 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 
 import { updatePage, toggleModal } from "../../actions";
-
-const DropDown = props => {
-    const { data, isOpen, updatePage } = props;
-    if(!isOpen) {
-        return null;
-    }
-
-    const colorList = data.map((color,key) => {
-        return (
-            <div
-                key={key}
-                onClick={() => updatePage(color)}
-                >{color}</div>
-        );
-    });
-
-    return(
-        <div className="modal--color__data">
-            { colorList }
-        </div>
-    );
-}
+import Dropdown from "./Dropdown";
 
 class ColorModal extends Component {
     render() {
@@ -38,10 +17,11 @@ class ColorModal extends Component {
                     className="modal--color__title"
                     onClick={toggleModal}
                     >Colors</div>
-                <DropDown
+                <Dropdown
                     isOpen={isOpen}
                     data={data}
                     updatePage={updatePage}
+                    dropdownClass="modal--color__data"
                     />
             </div>
         );
@@ -58,5 +38,5 @@ const mapDispatchToProps = dispatch => ({
     updatePage: (value) => dispatch(updatePage("colors",value))
 });
 
-export { DropDown, ColorModal };
+export { ColorModal };
 export default connect(mapStateToProps, mapDispatchToProps)(ColorModal);
