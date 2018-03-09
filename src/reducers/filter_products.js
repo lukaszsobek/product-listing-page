@@ -1,4 +1,4 @@
-const filterProducts = (state,action) => {
+const filterProducts = (state) => {
     const { categories, colors} = state.activeFilters;
 
     if (!categories.length && !colors.length ) {

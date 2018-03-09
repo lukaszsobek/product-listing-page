@@ -1,5 +1,5 @@
 ## Product Listing Page with:
-JavaScript, ES6, React, JSX, Redux, Jest, RWD
+JavaScript, ES6, React, JSX, Redux, Redux thunk, Jest, RWD
 
 ![screenshot-20180308153546-1202x881](https://user-images.githubusercontent.com/23530054/37156788-60bf4f24-22e7-11e8-8a87-d41c8e060956.png)
 
@@ -19,13 +19,12 @@ JavaScript, ES6, React, JSX, Redux, Jest, RWD
 - Can run tests on parts of the application listed below.
 
 ## Test coverage:
-- Components (smart & dumb), actions, components, store, middleware
+- Components (smart & dumb), actions, components, reducers, store, middleware
 
 ## Note:
 - Scss in this app would have been overkill. There are, however css variables for colors and a little bit of BEM mixed in.
 
 ## To Do:
-- Add missing reducer tests
 - Add clear filter option to remove filters
 - Refactor dropdowns to independent component
 - Fetching Products from an external api

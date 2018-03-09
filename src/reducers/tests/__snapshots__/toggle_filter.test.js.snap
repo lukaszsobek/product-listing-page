@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`toggleFilter reducer adds a new filter 1`] = `
+Object {
+  "activeFilters": Object {
+    "aType": Array [
+      "aFilter",
+      "anotherFilter",
+    ],
+  },
+}
+`;
+
+exports[`toggleFilter reducer removes existing filter 1`] = `
+Object {
+  "activeFilters": Object {
+    "aType": Array [],
+  },
+}
+`;

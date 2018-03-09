@@ -19,7 +19,7 @@ const rootReducer = (state = initialState, action) => {
             return toggleModal(state,action);
 
         case FILTER_PRODUCTS:
-            return filterProducts(state,action);
+            return filterProducts(state);
 
         default:
             return {
