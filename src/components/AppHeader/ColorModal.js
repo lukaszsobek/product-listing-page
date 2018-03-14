@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 
-import { updatePage, toggleModal } from "../../actions";
+import { filterProducts, toggleModal } from "../../actions";
 import Dropdown from "./Dropdown";
 
 class ColorModal extends Component {
     render() {
-        const { data, isOpen, updatePage, toggleModal } = this.props;
+        const { data, isOpen, filterProducts, toggleModal } = this.props;
         return (
             <div className={
                 isOpen 
@@ -20,7 +20,7 @@ class ColorModal extends Component {
                 <Dropdown
                     isOpen={isOpen}
                     data={data}
-                    updatePage={updatePage}
+                    filterProducts={filterProducts}
                     dropdownClass="modal--color__data"
                     />
             </div>
@@ -35,7 +35,7 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
     toggleModal: () => dispatch(toggleModal("ColorModal")),
-    updatePage: (value) => dispatch(updatePage("colors",value))
+    filterProducts: (value) => dispatch(filterProducts("colors",value))
 });
 
 export { ColorModal };

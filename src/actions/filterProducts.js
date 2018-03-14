@@ -1,7 +1,10 @@
-import { FILTER_PRODUCTS } from "../constants";
+import { updatePage, toggleFilter } from "./";
 
-const filterProducts = () => ({
-    type: FILTER_PRODUCTS
-});
+const filterProducts = (filterType, filterValue) => {
+    return dispatch => {
+        dispatch(toggleFilter(filterType, filterValue));
+        dispatch(updatePage());
+    }
+}
 
 export default filterProducts;

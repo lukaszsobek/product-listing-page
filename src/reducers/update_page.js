@@ -1,4 +1,4 @@
-const filterProducts = (state) => {
+const updatePage = (state) => {
     const { categories, colors} = state.activeFilters;
 
     if (!categories.length && !colors.length ) {
@@ -46,4 +46,4 @@ const filterProducts = (state) => {
     }
 };
 
-export default filterProducts;
+export default updatePage;

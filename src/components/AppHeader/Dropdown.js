@@ -1,7 +1,7 @@
 import React from "react";
 
 const Dropdown = props => {
-    const { data, dropdownClass, isOpen, updatePage } = props;
+    const { data, dropdownClass, isOpen, filterProducts } = props;
     if(!isOpen) {
         return null;
     }
@@ -10,7 +10,7 @@ const Dropdown = props => {
         return (
             <div
                 key={key}
-                onClick={() => updatePage(dataItem)}
+                onClick={() => filterProducts(dataItem)}
                 >{dataItem}</div>
         );
     });
