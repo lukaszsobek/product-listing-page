@@ -39,7 +39,6 @@ header {
   justify-content: space-between;
 }
 
-
 /* modals */
 
 
@@ -84,12 +83,9 @@ header {
 .product-list {
   display: flex;
   flex-wrap: wrap;
+  max-width: 950px;
+  margin: 0 auto;
 }
-
-/* 
-product-list__item could have been nested so as 
-not to have to count the % explicitly
-*/
 
 .product-list__item {
   width: 27%;
@@ -119,7 +115,8 @@ not to have to count the % explicitly
 }
 
 .product-list__item__colors__name {
-  margin: 0 5px;
+  display: inline-block;
+  margin: 2px 5px;
   padding: 1px 3px;
   border-radius: 5px;
   background: var(--shade);
