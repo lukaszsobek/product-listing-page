@@ -12,17 +12,17 @@ https://lukaszsobek.com/repo/product-listing-page/
 - yarn build - creates production build
 
 ## Can do:
-- Can see items.
+- Can see loading message for first 5 seconds.
+- Can see items after an initial delay of 5 seconds.
 - Can resize screen and items will reflow to fit.
-- Can use dropdown to toggle category filter, if filter is set the app will only show items from the selected category.
+- Can use dropdown to toggle category filter.
+- If category filter set will only show items from selected category.
 - Can use multiple categories to show items from.
-- Can use dropdown to toggle color filter, if filter is set only items with a given color will be listed.
+- Can use dropdown to toggle color filter.
+- If color filter set will  only show items with a selected color.
 - Can use multiple colors as basis for filtering.
 - Can use a combination of colors and categories to filter items.
 - Can run tests on parts of the application listed below.
 
 ## Test coverage:
 - Components (smart & dumb), actions, components, reducers, store, middleware
-
-## To Do:
-- Fetching Products from an external api

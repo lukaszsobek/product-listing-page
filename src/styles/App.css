@@ -31,9 +31,8 @@ header {
   box-shadow: 0 0 3px var(--shade);
 }
 
-
 .container {
-  max-width: 950px;
+  max-width: 1200px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -85,10 +84,17 @@ header {
 /* product list */
 
 
+.products--loading,
+.products--error {
+  text-align: center;
+  padding: 20px;
+}
+
+
 .product-list {
   display: flex;
   flex-wrap: wrap;
-  max-width: 950px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 

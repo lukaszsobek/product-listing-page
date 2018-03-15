@@ -2,8 +2,9 @@
   "name": "product-listing-page",
   "version": "0.1.0",
   "private": true,
-  "homepage" : "http://www.lukaszsobek.com/repo/product-listing-page",
+  "homepage": "http://www.lukaszsobek.com/repo/product-listing-page",
   "dependencies": {
+    "axios": "^0.18.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-redux": "^5.0.7",
