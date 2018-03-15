@@ -1,14 +1,27 @@
 import React from "react";
 
 const Dropdown = props => {
-    const { clearFilter, data, dropdownClass, isOpen, toggleFilter } = props;
+    const {
+        clearFilter,
+        data,
+        dropdownClass,
+        activeFilters,
+        isOpen,
+        toggleFilter
+    } = props;
+
     if(!isOpen) {
         return null;
     }
 
+    const activeFilterString = activeFilters.join(",,,");
+
     const list = data.map((dataItem,key) => {
+        const isFilterActive = activeFilterString.indexOf(dataItem) > -1;
+
         return (
             <div
+                className={isFilterActive ? "active" : ""}
                 key={key}
                 onClick={() => toggleFilter(dataItem)}
                 >{dataItem}</div>
@@ -18,11 +31,13 @@ const Dropdown = props => {
     return(
         <div className={dropdownClass}>
             { list }
-            <div
+            { activeFilters.length > 0 &&
+                <div
                 onClick={clearFilter}
-            >
-            ...clear
-            </div>
+                >
+                ...clear
+                </div>
+            }
         </div>
     );
 }

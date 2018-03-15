@@ -76,6 +76,11 @@ header {
   text-align: center;
 }
 
+.modal--category__data .active,
+.modal--color__data .active {
+  border-left: 5px solid var(--red);
+}
+
 
 /* product list */
 

@@ -1,6 +1,9 @@
 ## Product Listing Page with:
 JavaScript, ES6, React, JSX, Redux, Redux thunk, Jest, RWD
 
+## Working demo:
+https://lukaszsobek.com/repo/product-listing-page/
+
 ![screenshot-20180308153546-1202x881](https://user-images.githubusercontent.com/23530054/37156788-60bf4f24-22e7-11e8-8a87-d41c8e060956.png)
 
 ## Clone the repo, and then:
@@ -21,10 +24,5 @@ JavaScript, ES6, React, JSX, Redux, Redux thunk, Jest, RWD
 ## Test coverage:
 - Components (smart & dumb), actions, components, reducers, store, middleware
 
-## Note:
-- Scss in this app would have been overkill. There are, however css variables for colors and a little bit of BEM mixed in.
-
 ## To Do:
 - Fetching Products from an external api
-- Add showing active filters
-

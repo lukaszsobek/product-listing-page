@@ -11,7 +11,15 @@ import Dropdown from "./Dropdown";
 
 class ColorModal extends Component {
     render() {
-        const { clearFilter, data, isOpen, toggleFilter, toggleModal } = this.props;
+        const { 
+            activeFilters,
+            clearFilter,
+            data,
+            isOpen,
+            toggleFilter,
+            toggleModal
+        } = this.props;
+        
         return (
             <div className={
                 isOpen 
@@ -25,6 +33,7 @@ class ColorModal extends Component {
                 <Dropdown
                     isOpen={isOpen}
                     data={data}
+                    activeFilters={activeFilters}
                     toggleFilter={toggleFilter}
                     clearFilter={clearFilter}
                     dropdownClass="modal--color__data"
@@ -36,7 +45,8 @@ class ColorModal extends Component {
 
 const mapStateToProps = state => ({
     isOpen: state.modalState.colorModalVisible,
-    data: state.dropdownData.colors
+    data: state.dropdownData.colors,
+    activeFilters: state.activeFilters.colors
 });
 
 const mapDispatchToProps = dispatch => ({
