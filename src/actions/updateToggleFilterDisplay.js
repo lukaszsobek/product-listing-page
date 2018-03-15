@@ -1,10 +1,10 @@
-import { updatePage, toggleFilter } from "./";
+import { updatePage, toggleFilter } from './'
 
 const updateToggleFilterDisplay = (filterType, filterValue) => {
-    return dispatch => {
-        dispatch(toggleFilter(filterType, filterValue));
-        dispatch(updatePage());
-    }
+  return dispatch => {
+    dispatch(toggleFilter(filterType, filterValue))
+    dispatch(updatePage())
+  }
 }
 
-export default updateToggleFilterDisplay;
+export default updateToggleFilterDisplay

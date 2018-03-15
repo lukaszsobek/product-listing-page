@@ -1,20 +1,18 @@
-import Dropdown from "../Dropdown";
+import Dropdown from '../Dropdown'
 
-describe("DropDown", () => {
+describe('DropDown', () => {
+  it('returns null if isOpen is false', () => {
+    const props = {}
+    expect(Dropdown(props)).toBe(null)
+  })
 
-    it("returns null if isOpen is false",() => {
-        const props = {}
-        expect(Dropdown(props)).toBe(null);
-    });
+  it('renders DropDown', () => {
+    const props = {
+      isOpen: true,
+      data: [1, 2],
+      dropdownClass: 'testClass'
 
-    it("renders DropDown",() => {
-        const props = {
-            isOpen: true,
-            data: [1,2],
-            dropdownClass: "testClass"
-
-        }
-        expect(Dropdown(props)).toMatchSnapshot();
-    });
-
-});
+    }
+    expect(Dropdown(props)).toMatchSnapshot()
+  })
+})

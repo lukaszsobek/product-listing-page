@@ -1,8 +1,8 @@
 // just updates page
-import { UPDATE_PAGE } from "../constants";
+import { UPDATE_PAGE } from '../constants'
 
 const updatePage = () => ({
-    type: UPDATE_PAGE
+  type: UPDATE_PAGE
 })
 
-export default updatePage;
+export default updatePage

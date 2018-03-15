@@ -1,10 +1,10 @@
-import { updatePage, clearFilter } from "./";
+import { updatePage, clearFilter } from './'
 
 const updateClearFilterDisplay = filterType => {
-    return dispatch => {
-        dispatch(clearFilter(filterType));
-        dispatch(updatePage());
-    }
+  return dispatch => {
+    dispatch(clearFilter(filterType))
+    dispatch(updatePage())
+  }
 }
 
-export default updateClearFilterDisplay;
+export default updateClearFilterDisplay

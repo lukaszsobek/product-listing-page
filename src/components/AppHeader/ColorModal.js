@@ -1,63 +1,63 @@
-import React, { Component } from "react";
-import { connect } from "react-redux";
+import React, { Component } from 'react'
+import { connect } from 'react-redux'
 
-import { 
-    updateClearFilterDisplay,
-    updateToggleFilterDisplay,
-    toggleModal
-} from "../../actions";
+import {
+  updateClearFilterDisplay,
+  updateToggleFilterDisplay,
+  toggleModal
+} from '../../actions'
 
-import Dropdown from "./Dropdown";
+import Dropdown from './Dropdown'
 
 class ColorModal extends Component {
-    render() {
-        const { 
-            activeFilters,
-            clearFilter,
-            data,
-            isOpen,
-            toggleFilter,
-            toggleModal
-        } = this.props;
-        
-        return (
-            <div className={
-                isOpen 
-                ? "modal--color modal--color--open"
-                : "modal--color"
-            }>
-                <div
-                    className="modal--color__title"
-                    onClick={toggleModal}
-                    >Colors</div>
-                <Dropdown
-                    isOpen={isOpen}
-                    data={data}
-                    activeFilters={activeFilters}
-                    toggleFilter={toggleFilter}
-                    clearFilter={clearFilter}
-                    dropdownClass="modal--color__data"
-                    />
-            </div>
-        );
-    }
+  render () {
+    const {
+      activeFilters,
+      clearFilter,
+      data,
+      isOpen,
+      toggleFilter,
+      toggleModal
+    } = this.props
+
+    return (
+      <div className={
+        isOpen
+          ? 'modal--color modal--color--open'
+          : 'modal--color'
+      }>
+        <div
+          className='modal--color__title'
+          onClick={toggleModal}
+        >Colors</div>
+        <Dropdown
+          isOpen={isOpen}
+          data={data}
+          activeFilters={activeFilters}
+          toggleFilter={toggleFilter}
+          clearFilter={clearFilter}
+          dropdownClass='modal--color__data'
+        />
+      </div>
+    )
+  }
 };
 
 const mapStateToProps = state => ({
-    isOpen: state.modalState.colorModalVisible,
-    data: state.dropdownData.colors,
-    activeFilters: state.activeFilters.colors
-});
+  isOpen: state.modalState.colorModalVisible,
+  data: state.dropdownData.colors,
+  activeFilters: state.activeFilters.colors
+})
 
 const mapDispatchToProps = dispatch => ({
-    toggleModal: () => dispatch(toggleModal("ColorModal")),
-    toggleFilter: (value) => dispatch(
-        updateToggleFilterDisplay("colors",value)
-    ),
-    clearFilter: () => dispatch(
-        updateClearFilterDisplay("colors")
-    )
-});
+  toggleModal: () => dispatch(toggleModal('ColorModal')),
+  toggleFilter: (value) => dispatch(
+    updateToggleFilterDisplay('colors', value)
+  ),
+  clearFilter: () => dispatch(
+    updateClearFilterDisplay('colors')
+  )
+})
 
-export { ColorModal };
-export default connect(mapStateToProps, mapDispatchToProps)(ColorModal);
+export { ColorModal }
+export default connect(mapStateToProps, mapDispatchToProps)(ColorModal)

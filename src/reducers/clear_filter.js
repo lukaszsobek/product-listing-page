@@ -1,15 +1,15 @@
 const clearFilter = (state, action) => {
-    const {filterType} = action;
+  const {filterType} = action
 
-    const activeFilters = {
-        ...state.activeFilters              
-    }
-    activeFilters[filterType] = [];
+  const activeFilters = {
+    ...state.activeFilters
+  }
+  activeFilters[filterType] = []
 
-    return {
-        ...state,
-        activeFilters
-    }
+  return {
+    ...state,
+    activeFilters
+  }
 }
 
-export default clearFilter;
+export default clearFilter
