@@ -25,7 +25,6 @@ JavaScript, ES6, React, JSX, Redux, Redux thunk, Jest, RWD
 - Scss in this app would have been overkill. There are, however css variables for colors and a little bit of BEM mixed in.
 
 ## To Do:
-- Add clear filter option to remove filters
 - Fetching Products from an external api
 - Add showing active filters
 

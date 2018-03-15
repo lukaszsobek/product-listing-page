@@ -1,12 +1,16 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 
-import { filterProducts, toggleModal } from "../../actions";
+import {
+    updateClearFilterDisplay,
+    updateToggleFilterDisplay,
+    toggleModal
+} from "../../actions";
 import Dropdown from "./Dropdown";
 
 class CategoryModal extends Component {
     render() {
-        const { data, isOpen, filterProducts, toggleModal } = this.props;
+        const { clearFilter, data, isOpen, toggleFilter, toggleModal } = this.props;
         return (
             <div className={
                     isOpen 
@@ -20,7 +24,8 @@ class CategoryModal extends Component {
                 <Dropdown
                     isOpen={isOpen}
                     data={data}
-                    filterProducts={filterProducts}
+                    toggleFilter={toggleFilter}
+                    clearFilter={clearFilter}
                     dropdownClass="modal--category__data"
                     />
             </div>
@@ -35,7 +40,12 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
     toggleModal: () => dispatch(toggleModal("CategoryModal")),
-    filterProducts: (value) => dispatch(filterProducts("categories",value))
+    toggleFilter: (value) => dispatch(
+        updateToggleFilterDisplay("categories",value)
+    ),
+    clearFilter: () => dispatch(
+        updateClearFilterDisplay("categories")
+    )
 
 });
 

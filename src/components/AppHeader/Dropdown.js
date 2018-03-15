@@ -1,7 +1,7 @@
 import React from "react";
 
 const Dropdown = props => {
-    const { data, dropdownClass, isOpen, filterProducts } = props;
+    const { clearFilter, data, dropdownClass, isOpen, toggleFilter } = props;
     if(!isOpen) {
         return null;
     }
@@ -10,7 +10,7 @@ const Dropdown = props => {
         return (
             <div
                 key={key}
-                onClick={() => filterProducts(dataItem)}
+                onClick={() => toggleFilter(dataItem)}
                 >{dataItem}</div>
         );
     });
@@ -18,6 +18,11 @@ const Dropdown = props => {
     return(
         <div className={dropdownClass}>
             { list }
+            <div
+                onClick={clearFilter}
+            >
+            ...clear
+            </div>
         </div>
     );
 }

@@ -1,5 +1,5 @@
 import {
-    filterProducts,
+    updateToggleFilterDisplay,
     toggleFilter,
     toggleModal,
     updatePage
@@ -7,8 +7,8 @@ import {
 
 describe("Correclty creates action for",() => {
 
-    it("filterProducts", () => {
-        expect(filterProducts()).toMatchSnapshot();
+    it("updateToggleFilterDisplay", () => {
+        expect(updateToggleFilterDisplay()).toMatchSnapshot();
     });
 
     it("toggleFilter", () => {
