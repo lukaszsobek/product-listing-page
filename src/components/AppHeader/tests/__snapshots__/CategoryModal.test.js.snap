@@ -11,6 +11,7 @@ exports[`CategoryModal renders CategoryModal 1`] = `
     Category
   </div>
   <Dropdown
+    clearFilter={undefined}
     data={
       Array [
         1,
@@ -19,7 +20,7 @@ exports[`CategoryModal renders CategoryModal 1`] = `
     }
     dropdownClass="modal--category__data"
     isOpen={false}
-    updatePage={[Function]}
+    toggleFilter={undefined}
   />
 </div>
 `;

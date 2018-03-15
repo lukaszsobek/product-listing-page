@@ -1,6 +1,6 @@
-import filterProducts from "../filter_products";
+import updatePage from "../update_page";
 
-describe("filterProducts reducer returns",() => {
+describe("updatePage reducer returns",() => {
 
     const products = [
         { colors: ["blue"], category: "one" },
@@ -14,22 +14,29 @@ describe("filterProducts reducer returns",() => {
     }
 
     it("all products if no filter set",() => {
-        expect(filterProducts(state).filteredProducts).toMatchSnapshot();
+        expect(updatePage(state).filteredProducts).toEqual(products);
     });
 
     it("only color products with color filter",() => {
         state.activeFilters.colors = ["blue"];
-        expect(filterProducts(state).filteredProducts).toMatchSnapshot();
+        expect(updatePage(state).filteredProducts).toEqual([
+            {"category": "one", "colors": ["blue"]},
+            {"category": "two", "colors": ["blue"]}
+        ]);
     });
 
     it("only categories with categories filter",() => {
         state.activeFilters.categories = ["one"];
-        expect(filterProducts(state).filteredProducts).toMatchSnapshot();
+        expect(updatePage(state).filteredProducts).toEqual([
+            {"category": "one", "colors": ["blue"]}
+        ]);
     });
 
     it("only items with both filters set",() => {
         state.activeFilters.categories = ["two"];
         state.activeFilters.colors = ["green"];
-        expect(filterProducts(state).filteredProducts).toMatchSnapshot();
+        expect(updatePage(state).filteredProducts).toEqual([
+            {"category": "two", "colors": ["green"]}
+        ]);
     });
 });

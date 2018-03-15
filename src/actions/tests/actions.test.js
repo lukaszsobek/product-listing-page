@@ -1,14 +1,28 @@
 import {
-    updateToggleFilterDisplay,
+    clearFilter,
     toggleFilter,
     toggleModal,
-    updatePage
+    updateClearFilterDisplay,
+    updatePage,
+    updateToggleFilterDisplay
 } from "../";
 
 describe("Correclty creates action for",() => {
 
     it("updateToggleFilterDisplay", () => {
-        expect(updateToggleFilterDisplay()).toMatchSnapshot();
+        expect(updateToggleFilterDisplay().toString()).toMatchSnapshot();
+    });
+
+    it("updateClearFilterDisplay", () => {
+        expect(updateClearFilterDisplay().toString()).toMatchSnapshot();
+    });
+
+    it("clearFilter", () => {
+        const props = "testValue";
+        expect(clearFilter(props)).toEqual({
+            "filterType": props,
+            "type": "CLEAR_FILTER"
+        });
     });
 
     it("toggleFilter", () => {
@@ -20,7 +34,7 @@ describe("Correclty creates action for",() => {
     }); 
     
     it("updatePage", () => {
-        expect(updatePage(1,2).toString()).toMatchSnapshot();
+        expect(updatePage()).toEqual({"type": "UPDATE_PAGE"});
     });     
 
 });

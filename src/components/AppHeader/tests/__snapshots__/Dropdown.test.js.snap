@@ -14,5 +14,10 @@ exports[`DropDown renders DropDown 1`] = `
   >
     2
   </div>
+  <div
+    onClick={undefined}
+  >
+    ...clear
+  </div>
 </div>
 `;

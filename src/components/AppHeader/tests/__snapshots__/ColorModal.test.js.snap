@@ -11,6 +11,7 @@ exports[`ColorModal renders ColorModal 1`] = `
     Colors
   </div>
   <Dropdown
+    clearFilter={undefined}
     data={
       Array [
         1,
@@ -19,7 +20,7 @@ exports[`ColorModal renders ColorModal 1`] = `
     }
     dropdownClass="modal--color__data"
     isOpen={false}
-    updatePage={[Function]}
+    toggleFilter={undefined}
   />
 </div>
 `;
