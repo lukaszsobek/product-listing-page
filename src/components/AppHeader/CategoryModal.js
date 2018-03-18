@@ -40,11 +40,13 @@ const CategoryModal = props => {
   )
 }
 
-const mapStateToProps = ({ root: state }) => ({
-  isOpen: state.modalState.categoryModalVisible,
-  data: state.dropdownData.categories,
-  activeFilters: state.activeFilters.categories
-})
+const mapStateToProps = ({ activeFilters, root: state }) => {
+  return {
+    isOpen: state.modalState.categoryModalVisible,
+    data: state.dropdownData.categories,
+    activeFilters: activeFilters.categories
+  }
+}
 
 const mapDispatchToProps = dispatch => ({
   toggleModal: () => dispatch(toggleModal('CategoryModal')),

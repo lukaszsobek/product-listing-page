@@ -1,14 +1,10 @@
 import {
-  CLEAR_FILTER,
   SET_LOADED_STATE,
   SET_PRODUCTS,
-  TOGGLE_FILTER,
   TOGGLE_MODAL,
   UPDATE_PAGE
 } from '../constants'
 
-import clearFilter from './clear_filter'
-import toggleFilter from './toggle_filter'
 import toggleModal from './toggle_modal'
 import updatePage from './update_page'
 import setProducts from './set_products'
@@ -23,12 +19,6 @@ const rootReducer = (state = initialState, action) => {
 
     case SET_PRODUCTS:
       return setProducts(state, action)
-
-    case CLEAR_FILTER:
-      return clearFilter(state, action)
-
-    case TOGGLE_FILTER:
-      return toggleFilter(state, action)
 
     case TOGGLE_MODAL:
       return toggleModal(state, action)
