@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { connect } from 'react-redux'
 
 import {
@@ -8,39 +8,37 @@ import {
 } from '../../actions'
 import Dropdown from './Dropdown'
 
-class CategoryModal extends Component {
-  render () {
-    const {
-      activeFilters,
-      clearFilter,
-      data,
-      isOpen,
-      toggleFilter,
-      toggleModal
-    } = this.props
+const CategoryModal = props => {
+  const {
+    activeFilters,
+    clearFilter,
+    data,
+    isOpen,
+    toggleFilter,
+    toggleModal
+  } = props
 
-    return (
-      <div className={
-        isOpen
-          ? 'modal--category modal--category--open'
-          : 'modal--category'
-      }>
-        <div
-          className='modal--category__title'
-          onClick={toggleModal}
-        >Category</div>
-        <Dropdown
-          isOpen={isOpen}
-          data={data}
-          activeFilters={activeFilters}
-          toggleFilter={toggleFilter}
-          clearFilter={clearFilter}
-          dropdownClass='modal--category__data'
-        />
-      </div>
-    )
-  }
-};
+  return (
+    <div className={
+      isOpen
+        ? 'modal--category modal--category--open'
+        : 'modal--category'
+    }>
+      <div
+        className='modal--category__title'
+        onClick={toggleModal}
+      >Category</div>
+      <Dropdown
+        isOpen={isOpen}
+        data={data}
+        activeFilters={activeFilters}
+        toggleFilter={toggleFilter}
+        clearFilter={clearFilter}
+        dropdownClass='modal--category__data'
+      />
+    </div>
+  )
+}
 
 const mapStateToProps = state => ({
   isOpen: state.modalState.categoryModalVisible,

@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { connect } from 'react-redux'
 
 import {
@@ -9,39 +9,38 @@ import {
 
 import Dropdown from './Dropdown'
 
-class ColorModal extends Component {
-  render () {
-    const {
-      activeFilters,
-      clearFilter,
-      data,
-      isOpen,
-      toggleFilter,
-      toggleModal
-    } = this.props
+const ColorModal = props => {
+  const {
+    activeFilters,
+    clearFilter,
+    data,
+    isOpen,
+    toggleFilter,
+    toggleModal
+  } = props
 
-    return (
-      <div className={
-        isOpen
-          ? 'modal--color modal--color--open'
-          : 'modal--color'
-      }>
-        <div
-          className='modal--color__title'
-          onClick={toggleModal}
-        >Colors</div>
-        <Dropdown
-          isOpen={isOpen}
-          data={data}
-          activeFilters={activeFilters}
-          toggleFilter={toggleFilter}
-          clearFilter={clearFilter}
-          dropdownClass='modal--color__data'
-        />
-      </div>
-    )
-  }
-};
+  return (
+    <div className={
+      isOpen
+        ? 'modal--color modal--color--open'
+        : 'modal--color'
+    }>
+      <div
+        className='modal--color__title'
+        onClick={toggleModal}
+      >Colors</div>
+      <Dropdown
+        isOpen={isOpen}
+        data={data}
+        activeFilters={activeFilters}
+        toggleFilter={toggleFilter}
+        clearFilter={clearFilter}
+        dropdownClass='modal--color__data'
+      />
+    </div>
+  )
+}
+
 
 const mapStateToProps = state => ({
   isOpen: state.modalState.colorModalVisible,
