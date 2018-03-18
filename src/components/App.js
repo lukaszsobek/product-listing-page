@@ -36,7 +36,7 @@ class App extends Component {
   }
 }
 
-const mapStateToProps = state => ({
+const mapStateToProps = ({ root: state }) => ({
   productList: state.filteredProducts,
   loadedState: state.dataLoadedState
 })

@@ -40,7 +40,7 @@ const CategoryModal = props => {
   )
 }
 
-const mapStateToProps = state => ({
+const mapStateToProps = ({ root: state }) => ({
   isOpen: state.modalState.categoryModalVisible,
   data: state.dropdownData.categories,
   activeFilters: state.activeFilters.categories
