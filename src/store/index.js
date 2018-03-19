@@ -1,19 +1,19 @@
-import { applyMiddleware, combineReducers, createStore } from 'redux'
-import thunk from 'redux-thunk'
+import { combineReducers, createStore } from 'redux'
 
-import rootReducer from '../reducers'
-import filtersReducer from '../reducers/filtersReducer'
-import modalsReducer from '../reducers/modalsReducer'
-import productsReducer from '../reducers/productsReducer'
+import {
+  filtersReducer,
+  modalsReducer,
+  productsReducer,
+  loadedStateReducer
+} from "../reducers"
 
 const store = createStore(
   combineReducers({
-    root: rootReducer,
     activeFilters: filtersReducer,
     modalState: modalsReducer,
-    products: productsReducer
-  }),
-  applyMiddleware(thunk)
+    products: productsReducer,
+    dataLoadedState: loadedStateReducer
+  })
 )
 
 export default store

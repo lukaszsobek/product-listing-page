@@ -27,9 +27,7 @@ const Dropdown = ({
       { activeFilters.length > 0 &&
         <div
           onClick={clearFilter}
-        >
-                ...clear
-        </div>
+        >...clear</div>
       }
     </div>
   )

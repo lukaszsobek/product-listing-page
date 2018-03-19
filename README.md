@@ -4,7 +4,7 @@ JavaScript, ES6, React, JSX, Redux, Jest, RWD
 ## Working demo:
 https://lukaszsobek.com/repo/product-listing-page/
 
-![screenshot-20180308153546-1202x881](https://user-images.githubusercontent.com/23530054/37156788-60bf4f24-22e7-11e8-8a87-d41c8e060956.png)
+![screenshot-20180319215022-1337x979](https://user-images.githubusercontent.com/23530054/37621586-a1eaaed6-2bbf-11e8-83b2-1481dccaac28.png)
 
 ## Clone the repo, and then:
 - yarn start - starts dev server with auto update and lint

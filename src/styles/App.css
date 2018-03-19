@@ -35,17 +35,39 @@ header {
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
+
+
+/* title */
+
+
+header .title {
+  width: 100%;
+  font-weight: bold;
+  text-align: center;
+  margin: 20px;
+}
+
 
 /* modals */
 
 
 .modal--category,
 .modal--color {
+  width: 30%;
+  text-align: center;
   user-select: none;
   cursor: pointer;
   position: relative;
+}
+
+@media screen and (max-width: 400px) {
+  .modal--category,
+  .modal--color {
+    width: 100%;
+  }
 }
 
 .modal--category--open,

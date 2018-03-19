@@ -5,8 +5,10 @@ import { clearFilter, toggleFilter, toggleModal} from '../../actions'
 
 import Dropdown from './Dropdown'
 
+const data = ['blue', 'green', 'black']
+
 const ColorModal = ({
-  activeFilters, clearFilter, data, isOpen, toggleFilter, toggleModal
+  activeFilters, clearFilter, isOpen, toggleFilter, toggleModal
 }) => (
   <div className={
     isOpen
@@ -28,9 +30,8 @@ const ColorModal = ({
   </div>
 )
 
-const mapStateToProps = ({ activeFilters, modalState, root: state }) => ({
+const mapStateToProps = ({ activeFilters, modalState }) => ({
   isOpen: modalState.colorModalVisible,
-  data: state.dropdownData.colors,
   activeFilters: activeFilters.colors
 })
 

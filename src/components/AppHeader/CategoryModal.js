@@ -4,8 +4,10 @@ import { connect } from 'react-redux'
 import { clearFilter, toggleFilter, toggleModal } from '../../actions'
 import Dropdown from './Dropdown'
 
+const data = ['circles', 'squares', 'triangles']
+
 const CategoryModal = ({
-  activeFilters, clearFilter, data, isOpen, toggleFilter, toggleModal
+  activeFilters, clearFilter, isOpen, toggleFilter, toggleModal
 }) => (
   <div className={
     isOpen
@@ -27,11 +29,10 @@ const CategoryModal = ({
   </div>
 )
 
-const mapStateToProps = ({ activeFilters, modalState, root: state }) => {
+const mapStateToProps = (state) => {
   return {
-    isOpen: modalState.categoryModalVisible,
-    data: state.dropdownData.categories,
-    activeFilters: activeFilters.categories
+    isOpen: state.modalState.categoryModalVisible,
+    activeFilters: state.activeFilters.categories
   }
 }
 

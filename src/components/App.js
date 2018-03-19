@@ -36,12 +36,10 @@ class App extends Component {
   }
 }
 
-const mapStateToProps = (state) => {
-  return {
-    productList: getFilteredProducts(state.products, state.activeFilters),
-    loadedState: state.root.dataLoadedState
-  }
-}
+const mapStateToProps = ({activeFilters, dataLoadedState, products}) => ({
+    productList: getFilteredProducts(products, activeFilters),
+    loadedState: dataLoadedState
+})
 
 const mapDispatchToProps = dispatch => ({
   setLoadedState: (stateName) => dispatch(setLoadedState(stateName)),

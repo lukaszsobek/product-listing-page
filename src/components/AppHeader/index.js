@@ -6,6 +6,9 @@ import ColorModal from './ColorModal.js'
 const AppHeader = () => (
   <header>
     <nav className='container'>
+      <div className="title">
+        Sample Products
+      </div>
       <CategoryModal />
       <ColorModal />
     </nav>
