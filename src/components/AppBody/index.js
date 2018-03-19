@@ -2,9 +2,7 @@ import React from 'react'
 
 import ProductList from './ProductList'
 
-const AppBody = props => {
-  const { loadedState, productList } = props
-
+const AppBody = ({ loadedState, productList }) => {
   const errorMessage = 'Error loading products from remote server.'
   const loadingMessage = 'Loading products...'
 

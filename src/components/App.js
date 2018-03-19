@@ -3,7 +3,7 @@ import axios from 'axios'
 import { connect } from 'react-redux'
 
 import { setLoadedState, setProducts } from '../actions'
-import { getFilteredProducts } from "../selectors"
+import { getFilteredProducts } from '../selectors'
 
 import '../styles/App.css'
 
@@ -13,7 +13,6 @@ import AppBody from './AppBody'
 class App extends Component {
   componentDidMount () {
     const { setLoadedState, setProducts } = this.props
-
     axios.get('https://www.mocky.io/v2/5aafe5852d00004d006f0083?mocky-delay=5s')
       .then(res => {
         setProducts(res.data)
@@ -38,7 +37,6 @@ class App extends Component {
 }
 
 const mapStateToProps = (state) => {
-  // console.log(state)
   return {
     productList: getFilteredProducts(state.products, state.activeFilters),
     loadedState: state.root.dataLoadedState

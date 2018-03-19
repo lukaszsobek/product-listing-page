@@ -4,7 +4,13 @@ import {
 
 import setLoadedState from './set_loaded_state'
 
-import initialState from './state/initialState'
+const initialState = {
+  dropdownData: {
+    categories: ['circles', 'squares', 'triangles'],
+    colors: ['blue', 'green', 'black']
+  },
+  dataLoadedState: 'loading'
+}
 
 const rootReducer = (state = initialState, action) => {
   switch (action.type) {

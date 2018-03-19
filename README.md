@@ -1,5 +1,5 @@
 ## Product Listing Page with:
-JavaScript, ES6, React, JSX, Redux, Redux thunk, Jest, RWD
+JavaScript, ES6, React, JSX, Redux, Jest, RWD
 
 ## Working demo:
 https://lukaszsobek.com/repo/product-listing-page/
@@ -25,4 +25,4 @@ https://lukaszsobek.com/repo/product-listing-page/
 - Can run tests on parts of the application listed below.
 
 ## Test coverage:
-- Components (smart & dumb), actions, components, reducers, store, middleware
+- Components (smart & dumb), actions, components, reducers, store

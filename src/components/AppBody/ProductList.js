@@ -1,8 +1,6 @@
 import React from 'react'
 
-const ProductList = props => {
-  const { productList } = props
-
+const ProductList = ({ productList }) => {
   const listItems = productList.map((productData, key) => {
     return <ProductListItem key={key} data={productData} />
   })
@@ -14,14 +12,14 @@ const ProductList = props => {
   )
 }
 
-const ProductListItem = props => {
-  const { imageUrl, name, category, colors, price } = props.data
-
+const ProductListItem = ({
+  data: { imageUrl, name, category, colors, price }
+}) => {
   return (
     <div className='product-list__item'>
       <div className='product-list__item__name'>{ name }</div>
       <div className='product-list__item__image'>
-        <img src={imageUrl} alt="sample clipart" />
+        <img src={imageUrl} alt='sample clipart' />
       </div>
       <div className='product-list__item__category'>Category: { category }</div>
       <div className='product-list__item__colors'>
@@ -32,8 +30,8 @@ const ProductListItem = props => {
   )
 }
 
-const ColorList = props => {
-  return props.data.map((color, key) => {
+const ColorList = ({ data }) => {
+  return data.map((color, key) => {
     return (
       <span key={key} className='product-list__item__colors__name' >
         { color }

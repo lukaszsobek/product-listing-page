@@ -1,5 +1,5 @@
-import getFilteredProducts from "./getFilteredProducts"
+import getFilteredProducts from './getFilteredProducts'
 
 export {
-    getFilteredProducts
+  getFilteredProducts
 }

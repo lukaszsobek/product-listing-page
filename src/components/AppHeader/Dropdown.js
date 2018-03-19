@@ -1,15 +1,8 @@
 import React from 'react'
 
-const Dropdown = props => {
-  const {
-    clearFilter,
-    data,
-    dropdownClass,
-    activeFilters,
-    isOpen,
-    toggleFilter
-  } = props
-
+const Dropdown = ({
+  clearFilter, data, dropdownClass, activeFilters, isOpen, toggleFilter
+}) => {
   if (!isOpen) {
     return null
   }
