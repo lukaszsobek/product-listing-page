@@ -1,9 +1,8 @@
-import { updatePage, clearFilter } from './'
+import { clearFilter } from './'
 
 const updateClearFilterDisplay = filterType => {
   return dispatch => {
     dispatch(clearFilter(filterType))
-    dispatch(updatePage())
   }
 }
 

@@ -3,6 +3,7 @@ import axios from 'axios'
 import { connect } from 'react-redux'
 
 import { setLoadedState, setProducts } from '../actions'
+import { getFilteredProducts } from "../selectors"
 
 import '../styles/App.css'
 
@@ -36,10 +37,13 @@ class App extends Component {
   }
 }
 
-const mapStateToProps = ({ root: state }) => ({
-  productList: state.filteredProducts,
-  loadedState: state.dataLoadedState
-})
+const mapStateToProps = (state) => {
+  // console.log(state)
+  return {
+    productList: getFilteredProducts(state.products, state.activeFilters),
+    loadedState: state.root.dataLoadedState
+  }
+}
 
 const mapDispatchToProps = dispatch => ({
   setLoadedState: (stateName) => dispatch(setLoadedState(stateName)),

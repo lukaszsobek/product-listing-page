@@ -1,8 +1,4 @@
 const initialState = {
-  modalState: {
-    colorModalVisible: false,
-    categoryModalVisible: false
-  },
   dropdownData: {
     categories: [
       'circles',
@@ -15,13 +11,7 @@ const initialState = {
       'black'
     ]
   },
-  activeFilters: {
-    categories: [],
-    colors: []
-  },
   dataLoadedState: 'loading',
-  products: [],
-  filteredProducts: []
 }
 
 export default initialState

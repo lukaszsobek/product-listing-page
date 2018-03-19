@@ -42,8 +42,8 @@ const ColorModal = props => {
 }
 
 
-const mapStateToProps = ({ activeFilters, root: state }) => ({
-  isOpen: state.modalState.colorModalVisible,
+const mapStateToProps = ({ activeFilters, modalState, root: state }) => ({
+  isOpen: modalState.colorModalVisible,
   data: state.dropdownData.colors,
   activeFilters: activeFilters.colors
 })
