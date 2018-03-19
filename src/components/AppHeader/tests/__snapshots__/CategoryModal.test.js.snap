@@ -11,16 +11,23 @@ exports[`CategoryModal renders CategoryModal 1`] = `
     Category
   </div>
   <Dropdown
-    clearFilter={undefined}
-    data={
+    activeFilters={
       Array [
         1,
         2,
       ]
     }
+    clearFilter={[Function]}
+    data={
+      Array [
+        "circles",
+        "squares",
+        "triangles",
+      ]
+    }
     dropdownClass="modal--category__data"
     isOpen={false}
-    toggleFilter={undefined}
+    toggleFilter={[Function]}
   />
 </div>
 `;

@@ -5,9 +5,12 @@ describe('CategoryModal', () => {
     const props = {
       data: [1, 2],
       isOpen: false,
+      activeFilters: [1,2],
       updatePage: () => null,
-      toggleModal: () => null
+      toggleModal: () => null,
+      toggleFilter: () => null,
+      clearFilter: () => null
     }
-    expect(new CategoryModal(props).render()).toMatchSnapshot()
+    expect(CategoryModal(props)).toMatchSnapshot()
   })
 })

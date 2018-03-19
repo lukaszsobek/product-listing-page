@@ -5,6 +5,11 @@ exports[`AppHeader renders 1`] = `
   <nav
     className="container"
   >
+    <div
+      className="title"
+    >
+      Sample Products
+    </div>
     <Connect(CategoryModal) />
     <Connect(ColorModal) />
   </nav>

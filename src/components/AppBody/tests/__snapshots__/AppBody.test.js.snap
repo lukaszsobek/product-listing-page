@@ -1,5 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`AppBody renders when loading 1`] = `
+<div
+  className="products--loading"
+>
+  Loading products...
+</div>
+`;
+
+exports[`AppBody renders with error 1`] = `
+<div
+  className="products--error"
+>
+  Error loading products from remote server.
+</div>
+`;
+
 exports[`AppBody renders with props 1`] = `
 <main>
   <ProductList

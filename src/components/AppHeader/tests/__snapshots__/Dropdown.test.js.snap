@@ -1,21 +1,42 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`DropDown renders DropDown 1`] = `
+exports[`DropDown renders DropDown w/o active filters 1`] = `
 <div
   className="testClass"
 >
   <div
+    className=""
     onClick={[Function]}
   >
     1
   </div>
   <div
+    className=""
+    onClick={[Function]}
+  >
+    2
+  </div>
+</div>
+`;
+
+exports[`DropDown renders DropDown with active filters 1`] = `
+<div
+  className="testClass"
+>
+  <div
+    className="active"
+    onClick={[Function]}
+  >
+    1
+  </div>
+  <div
+    className="active"
     onClick={[Function]}
   >
     2
   </div>
   <div
-    onClick={undefined}
+    onClick={[Function]}
   >
     ...clear
   </div>

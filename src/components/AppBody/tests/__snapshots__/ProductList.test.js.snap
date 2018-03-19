@@ -38,6 +38,14 @@ exports[`ProductList renders ProductListItem 1`] = `
     name
   </div>
   <div
+    className="product-list__item__image"
+  >
+    <img
+      alt="sample clipart"
+      src={undefined}
+    />
+  </div>
+  <div
     className="product-list__item__category"
   >
     Category: 

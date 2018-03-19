@@ -14,7 +14,8 @@ describe('ProductList', () => {
         name: 'name',
         category: 'category',
         colors: 'colors',
-        price: 'price' }
+        price: 'price'
+      }
     }
     expect(ProductListItem(props)).toMatchSnapshot()
   })

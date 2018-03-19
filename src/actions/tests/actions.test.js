@@ -1,20 +1,12 @@
 import {
   clearFilter,
+  setLoadedState,
+  setProducts,
   toggleFilter,
   toggleModal,
-  updateClearFilterDisplay,
-  updatePage,
-  updateToggleFilterDisplay
 } from '../'
 
 describe('Correclty creates action for', () => {
-  it('updateToggleFilterDisplay', () => {
-    expect(updateToggleFilterDisplay().toString()).toMatchSnapshot()
-  })
-
-  it('updateClearFilterDisplay', () => {
-    expect(updateClearFilterDisplay().toString()).toMatchSnapshot()
-  })
 
   it('clearFilter', () => {
     const props = 'testValue'
@@ -24,15 +16,37 @@ describe('Correclty creates action for', () => {
     })
   })
 
+  it('setLoadedState', () => {
+    const props = "test"
+    expect(setLoadedState(props)).toEqual({
+      "loadedState": props,
+      "type": "SET_LOADED_STATE"
+    })
+  })
+
+  it('setProducts', () => {
+    const props = [1,2]
+    expect(setProducts(props)).toEqual({
+      "products": props,
+      "type": "SET_PRODUCTS"
+    })
+  })
+
   it('toggleFilter', () => {
-    expect(toggleFilter(1, 2)).toMatchSnapshot()
+    const props1 = "sampleType"
+    const props2 = "sampleValue"
+    expect(toggleFilter(props1, props2)).toEqual({
+      "filterType": props1,
+      "filterValue": props2,
+      "type": "TOGGLE_FILTER"
+    })
   })
 
   it('toggleModal', () => {
-    expect(toggleModal('sample')).toMatchSnapshot()
-  })
-
-  it('updatePage', () => {
-    expect(updatePage()).toEqual({'type': 'UPDATE_PAGE'})
+    const props = "sample"
+    expect(toggleModal(props)).toEqual({
+      "modal": props,
+      "type": "TOGGLE_MODAL"
+    })
   })
 })
