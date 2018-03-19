@@ -121,6 +121,13 @@ header {
   text-align: center;
 }
 
+.product-list__item__image {
+  margin: 10px 0
+}
+.product-list__item__image img {
+  width: 100%;
+}
+
 .product-list__item__category {
   font-style: italic;
 }

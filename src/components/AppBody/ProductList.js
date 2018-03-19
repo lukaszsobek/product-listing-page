@@ -15,11 +15,14 @@ const ProductList = props => {
 }
 
 const ProductListItem = props => {
-  const { name, category, colors, price } = props.data
+  const { imageUrl, name, category, colors, price } = props.data
 
   return (
     <div className='product-list__item'>
       <div className='product-list__item__name'>{ name }</div>
+      <div className='product-list__item__image'>
+        <img src={imageUrl} alt="sample clipart" />
+      </div>
       <div className='product-list__item__category'>Category: { category }</div>
       <div className='product-list__item__colors'>
                 Colors: <ColorList data={colors} />

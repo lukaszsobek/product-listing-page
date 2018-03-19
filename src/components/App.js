@@ -14,7 +14,7 @@ class App extends Component {
   componentDidMount () {
     const { setLoadedState, setProducts } = this.props
 
-    axios.get('http://www.mocky.io/v2/5aaa72f13300005d202da95c?mocky-delay=5s')
+    axios.get('https://www.mocky.io/v2/5aafe5852d00004d006f0083?mocky-delay=5s')
       .then(res => {
         setProducts(res.data)
         setLoadedState('loaded')
